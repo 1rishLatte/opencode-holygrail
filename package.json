@@ -1,0 +1,72 @@
+{
+  "name": "opencode-holygrail",
+  "version": "1.1.0",
+  "description": "Self-correcting autonomous engineering harness for web application development. OpenCode plugin edition.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "holy-grail-init": "./bin/index.js",
+    "opencode-holygrail": "./bin/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup && tsc --emitDeclarationOnly --declaration --outDir dist",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "agents",
+    "workflow",
+    "architecture",
+    "harness",
+    "cli",
+    "opencode",
+    "opencode-plugin"
+  ],
+  "author": "1rishLatte",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1rishLatte/THE-HOLY-GRAIL.git"
+  },
+  "bugs": {
+    "url": "https://github.com/1rishLatte/THE-HOLY-GRAIL/issues"
+  },
+  "homepage": "https://github.com/1rishLatte/THE-HOLY-GRAIL#readme",
+  "opencode": {
+    "plugin": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "AGENTS.md",
+    "assets",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@opencode-ai/plugin": "^1.18.30",
+    "zod": "^4.6.2"
+  },
+  "peerDependencies": {
+    "playwright": "^1.53.0"
+  },
+  "peerDependenciesMeta": {
+    "playwright": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2"
+  }
+}

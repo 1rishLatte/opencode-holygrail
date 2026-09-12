@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.opencode/
+.scratch/
+docs/
+# Keep harness templates, ignore scaffold outputs in plugin root itself
+# Plugin root scaffold artifacts (removed before publish):
+# docs/ and .scratch/ are project scaffolds — templates live in assets/templates/
+# Preserve src/index.ts only; ignore scaffold empties
+src/components/
+src/pages/
+src/styles/
+# OS
+.DS_Store
+Thumbs.db
+*.log

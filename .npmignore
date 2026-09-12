@@ -1,0 +1,8 @@
+# npm uses `files` allowlist; this is fallback — ensure nothing extra ships
+# Explicitly not needed due to `files` in package.json, but keep as safety
+src/
+tsconfig.json
+tsup.config.ts
+.gitignore
+.scratch/
+docs/
